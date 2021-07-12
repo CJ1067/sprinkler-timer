@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Raindial Irrigation Timer</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Christopher Lehman" />
+    <meta name="description" content="Raindial Irrigation Timer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="sec">
+        <main>
+            <button type="button" class="function" id="back" onclick="location.href='../index.html'">Back</button>
+            <article id="vtitle">				
+                <h1 class="vheading">Valve Run Times</h1>				
+            </article>
+        </main>
+        <div id="selected">
+            <article id="stitle">
+                <h3 class="vheading">Selected Schedule</h3>
+            </article>
+            <button type="button" class="function" id="a">A</button>
+            <button type="button" class="function" id="b">B</button>
+            <button type="button" class="function" id="c">C</button>
+            <article id="rtitle">
+                <h3 id="rheading">Run Schedule Now (Semi Auto)</h3>
+            </article>
+            <button type="button" class="function" id="arun">A</button>
+            <button type="button" class="function" id="brun">B</button>
+            <button type="button" class="function" id="crun">C</button>
+        </div>
+        <div id="runtimes">
+            <table id="valvetable">
+              <tr>
+                <th>Valve #</th>
+                <th>Run Time</th>
+                <th>Manual Run Time</th>
+                <th>Manual Start</th>
+              </tr>
+            </table>
+            <article>
+                <h1 id="mask" class="vheading">Loading...</h1>
+            </article>
+        </div>
+        <button type="button" class="function" id="save">Save</button>
+        
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

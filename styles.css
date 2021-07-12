@@ -1,0 +1,88 @@
+#status {
+    width: 10%;
+    height: 8%;
+    top: 6%;
+    left: 45%;
+    background-color: gray;
+}
+
+#schedule {
+    width: 10%;
+    height: 15%;
+    top: 20%;
+    left: 33%;
+}
+
+#start {
+    width: 10%;
+    height: 10%;
+    top: 35%;
+    left: 33%;
+}
+
+#wifi {
+    border-radius: 50%;
+    top: 23%;
+    left: 44%;
+    width: 12%;
+    height: 20%;
+}
+
+#valve {
+    top: 20%;
+    left: 57%;
+    width: 10%;
+    height: 25%;
+}
+
+#special {
+    width: 8%;
+    height: 6%;
+    top: 45%;
+    left: 46%;
+}
+
+#semi {
+    width: 8%;
+    height: 6%;
+    top: 53%;
+    left: 34%;
+}
+
+#manual {
+    width: 8%;
+    height: 6%;
+    top: 53%;
+    left: 58%;
+}
+
+#disable {
+    width: 8%;
+    height: 6%;
+    top: 60%;
+    left: 46%;
+}
+
+.function {
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    margin: 0;
+    position: absolute;
+    display: table-cell;
+}
+
+#sec {
+    width: 500px; margin: 0 auto;
+    text-align: center;
+    height: 70%;
+    width: 40%;
+    background-color: navy;
+}
+
+html, body 
+{
+    height:100%;
+}
+
