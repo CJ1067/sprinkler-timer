@@ -152,13 +152,13 @@ function loadTable (program, save = true) {
                 let manualtime = row.insertCell(2);
                 var editCell = document.createElement("div");
                 editCell.setAttribute("contenteditable", "");
-                editCell.setAttribute("id", "edit" + i);
+                editCell.setAttribute("id", "edit" + (i - 1));
                 editCell.innerHTML = "00:00"
                 manualtime.appendChild(editCell);
 
                 let manualrun = row.insertCell(3);
                 var manualButton = document.createElement("button");
-                manualButton.setAttribute("id", "manual" + i);
+                manualButton.setAttribute("id", "manual" + (i - 1));
                 manualButton.innerHTML = "X";
                 this.manualListener = function(event) {
                     var editValue = document.getElementById("edit" + this.id.slice(-1));
