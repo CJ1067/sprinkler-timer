@@ -1,18 +1,6 @@
-#vtitle {
+#mtitle {
     position: fixed;
     top: 2%;
-    text-align: center;
-}
-
-#stitle {
-    position: fixed;
-    top: 9%;
-    text-align: center;
-}
-
-#mask {
-    position: fixed;
-    top: 55%;
     text-align: center;
 }
 
@@ -24,40 +12,18 @@
     background-color: lightblue;
 }
 
-#a {
-    background-color: grey;
-    width: 8%;
-    height: 6%;
-    top: 18%;
-    left: 38%;
-}
-
-#b {
-    width: 8%;
-    height: 6%;
-    top: 18%;
-    left: 46%;
-}
-
-#c {
-    width: 8%;
-    height: 6%;
-    top: 18%;
-    left: 54%;
-}
-
-#runtimes {
+#manualtimes {
     position: fixed;
     left: 50%;
     transform: translate(-50%);
-    top: 30%;
+    top: 13%;
 }
 
-#save {
-    width: 8%;
-    height: 6%;
-    top: 85%;
-    left: 46%;
+#stop {
+    width: 12%;
+    height: 10%;
+    top: 70%;
+    left: 44%;
 }
 
 .function {
@@ -67,7 +33,7 @@
     position: fixed;
 }
 
-.vheading {
+.mheading {
     position: fixed;
     color: white;
     left: 50%;
@@ -89,31 +55,24 @@
         width: 95%;
     }
 
-    #a {
-        background-color: grey;
-        width: 20%;
-        left: 20%;
-    }
-    
-    #b {
-        width: 20%;
-        left: 40%;
-    }
-    
-    #c {
-        width: 20%;
-        left: 60%;
-    }
-
-    #save {
-        width: 20%;
-        top: 88%;
-        left: 40%;
+    #stop {
+        width: 40%;
+        top: 80%;
+        left: 30%;
     }
 
     #back {
         width: 15%;
         left: 8%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    /* For mobile phones: */
+    #stop {
+        width: 40%;
+        top: 85%;
+        left: 30%;
     }
 }
 
@@ -137,4 +96,4 @@ table {
   tr:nth-child(even) {
     background-color: royalblue;
   }
-  
+

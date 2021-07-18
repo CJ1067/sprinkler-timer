@@ -5,9 +5,6 @@
     let aButton = document.getElementById("a");
     let bButton = document.getElementById("b");
     let cButton = document.getElementById("c");
-    let aRun = document.getElementById("arun");
-    let bRun = document.getElementById("brun");
-    let cRun = document.getElementById("crun");
     let saveButton = document.getElementById("save");
     aButton.addEventListener("click", () => {
         aButton.style.backgroundColor = "grey";
@@ -26,42 +23,6 @@
         aButton.style.backgroundColor = "white";
         bButton.style.backgroundColor = "white";
         loadTable(2);
-    });
-    aRun.addEventListener("click", () => {
-        aRun.style.backgroundColor = "grey";
-        setTimeout(() => {  aRun.style.backgroundColor = "white"; }, 2000);
-        let url='http://98.167.209.219:8080/mp?pw=a6d82bced638de3def1e9bbb4983225c&pid=0';
-        fetch(url)
-            .then((response) => {
-                return response.json();
-            })
-            .then((result) => {
-
-            });
-    });
-    bRun.addEventListener("click", () => {
-        bRun.style.backgroundColor = "grey";
-        setTimeout(() => {  bRun.style.backgroundColor = "white"; }, 2000);
-        let url='http://98.167.209.219:8080/mp?pw=a6d82bced638de3def1e9bbb4983225c&pid=0';
-        fetch(url)
-            .then((response) => {
-                return response.json();
-            })
-            .then((result) => {
-                
-            });
-    });
-    cRun.addEventListener("click", () => {
-        cRun.style.backgroundColor = "grey";
-        setTimeout(() => {  cRun.style.backgroundColor = "white"; }, 2000);
-        let url='http://98.167.209.219:8080/mp?pw=a6d82bced638de3def1e9bbb4983225c&pid=0';
-        fetch(url)
-            .then((response) => {
-                return response.json();
-            })
-            .then((result) => {
-                
-            });
     });
     saveButton.addEventListener("click", () => {
        
@@ -148,34 +109,6 @@ function loadTable (program, save = true) {
                 let time = durs[i - 1]
                 editTime.innerHTML = Math.floor(time/60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + ":" + (time % 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
                 runtime.appendChild(editTime)
-
-                let manualtime = row.insertCell(2);
-                var editCell = document.createElement("div");
-                editCell.setAttribute("contenteditable", "");
-                editCell.setAttribute("id", "edit" + (i - 1));
-                editCell.innerHTML = "00:00"
-                manualtime.appendChild(editCell);
-
-                let manualrun = row.insertCell(3);
-                var manualButton = document.createElement("button");
-                manualButton.setAttribute("id", "manual" + (i - 1));
-                manualButton.innerHTML = "X";
-                this.manualListener = function(event) {
-                    var editValue = document.getElementById("edit" + this.id.slice(-1));
-                    let minsec = editValue.innerHTML.split(":");
-                    let time = parseInt(minsec[0]) * 60 + parseInt(minsec[1])
-                    console.log(time);
-                    let url='http://98.167.209.219:8080/cm?pw=a6d82bced638de3def1e9bbb4983225c&sid=' + this.id.slice(-1) + '&en=1&t=' + time;
-                    fetch(url)
-                        .then((response) => {
-                            return response.json();
-                        })
-                        .then((result) => {
-                            console.log(result)
-                        });
-                }
-                manualButton.addEventListener("click", this.manualListener, false);
-                manualrun.appendChild(manualButton);
             }
 
         });
